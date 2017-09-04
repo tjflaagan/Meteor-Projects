@@ -1,0 +1,52 @@
+<template name="joinWorld">  	
+	<div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>Join Around The World</h3>
+                <form class="viewForum">
+                  <b>Enter Easy ID:</b><br />
+                  <input type="text" id="easyid" class="form-control"><br />
+                  <button type="submit" class="btn btn-primary" id="worldview">Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="playWorld">
+  <h2>{{this.Easy_ID}} : {{this.Subject}}</h2>
+      <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                {{#unless notStarted}}
+                  {{> worldstarter}}
+                {{else}}
+                  {{> worldQuestions}}
+                {{/unless}}
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="worldstarter">
+  <h3>Are you ready to start?</h3>
+  <form class="viewForum">
+    <button type="submit" class="btn btn-success" id="startworld">Start</button>
+    <button type="submit" class="btn btn-danger" id="resetCounter">Reset Question List</button>
+  </form>
+</template>
+
+<template name="worldQuestions">
+  <h1>{{getQuestion}} </h1>
+  <hr />
+  <button type="submit" class="btn btn-success" id="viewAnswer">Show Answer</button>
+  <button type="submit" class="btn btn-info" id="nextQuestion">Next Question</button>
+</template>

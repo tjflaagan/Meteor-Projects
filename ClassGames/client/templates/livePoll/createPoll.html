@@ -1,0 +1,59 @@
+<template name="createPoll">
+  <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>Poll Question</h3>
+                  {{#autoForm schema="Schema.Polls" id="insertPoll" type="method" meteormethod="newPoll" }}
+                  <fieldset>
+                  {{> afQuickField name="Question"}}
+                  {{> afQuickField name="Answer_1"}}
+                  {{> afQuickField name="Answer_2"}}
+                  {{> afQuickField name="Answer_3"}}
+                  {{> afQuickField name="Answer_4"}}
+                  <button type="submit" class="btn btn-primary">Submit</button>    
+                </fieldset>
+                {{/autoForm}}
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>Poll Results</h3>
+                  <input type="text" id="easyid" class="form-control"><br />
+                  <button type="submit" class="btn btn-primary" id="pollresultsview">Submit</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="pollResults">
+<h2> {{this.Easy_ID}} : {{this.Question}}</h2>
+  <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+
+              {{> drillDown}}
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+
+
+<template name="drillDown">
+    <h2>Results</h2>
+    <div id="container-drilldown" style="min-width: 310px; height: 400px;"></div>
+</template>

@@ -1,0 +1,93 @@
+<template name="home">
+<div class="jumbotron">
+  <div class="container">
+    <h1>ClassGames</h1>
+    <h3>-Bringing active learning to the classroom</h3>
+  </div>
+</div>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row" >
+    	<div class="col-md-4">
+    	  <div class="well">
+    	  	<h3>Live Poll</h3>
+    	  	Live polling allows the instructor to create questions and present them to the class. After the class has been given sufficient time to answer, the instructor can present the statistics to the class giving the instructor insight into the comprehension level of the class.
+    	  	<br />
+          <br />
+          <br />
+          <br />
+          <hr /> 
+    	  	<div class="text-center">
+              <a class="btn btn-primary btn-lg" href={{pathFor 'createPoll'}}>Create Live Poll</a>
+              <a class="btn btn-success btn-lg" href={{pathFor 'joinPoll'}}>Join Live Poll</a>
+            </div>
+    	  </div>
+    	</div>
+    	<div class="col-md-4">
+    	  <div class="well">
+    	    <h3>What Am I</h3>
+    	    What Am I is a team based vocabulary game with similar gameplay to that of Pictionary. Instead of drawing pictures, the team must try to explain the word or phrase without saying any part of the word. The team selects 1 player to do the guessing while the others try to explain the word. After the word has been guessed, the team moves onto the next word. The team is given 2 minutes to guess as many words as they can. The team with the most points at the end wins.
+    	    <hr /> 
+    	    <div class="text-center">
+              <a class="btn btn-primary btn-lg" href={{pathFor 'createWhatAmI'}}>Create "What Am I"</a>
+              <a class="btn btn-success btn-lg" href={{pathFor 'joinWhatami'}}>Join "What Am I"</a>
+    	    </div>
+    	  </div>
+    	</div>
+    	<div class="col-md-4">
+    	  <div class="well">
+            <h3>Around The World</h3>
+            This game type is a free for all, one student starts as the challenger and faces another student 1v1 to see who can answer the quickest. Whoever answers first moves on to the next student in the classroom. At the end of the game period, whichever student has moved the farthest wins the game.
+            <br />
+            <br />
+            <br />
+            <hr />
+            <div class="text-center">
+              <a class="btn btn-primary btn-lg" href={{pathFor 'createWorld'}}>Create Game</a>
+              <a class="btn btn-success btn-lg" href={{pathFor 'joinWorld'}}>Join Game</a>
+            </div>
+    	  </div>
+    	</div>
+    </div>
+    <div class="row" >
+    	<div class="col-md-4 col-md-offset-2">
+    	  <div class="well">
+    	  	<h3>Jeopardy</h3>
+    	    Jeopardy classroom style! The class is typically split into 2 or more team depending on class size. Once split, teams select a question from a category and attempt to answer it. Scoring can be done in any way you like. There are 5 questions in each of the 5 categories ranging in value from $100 to $500.
+    	    <hr />
+    	    <div class="text-center">
+              <a class="btn btn-primary btn-lg" href={{pathFor 'createJeopardy'}}>Create Jeopardy</a>
+              <a class="btn btn-success btn-lg" href={{pathFor 'joinJeopardy'}}>Join Jeopardy</a>
+    	    </div>
+    	  </div>
+    	</div>
+    	<div class="col-md-4">
+    	  <div class="well">
+            <h3>Open Forum</h3>
+            Open submissions allows an instructor to open a blank forum for input from students. The form is currently anonymous and has no limit on input or size of input.
+            <br />
+            <br />
+            <br />
+            <hr /> 
+            <div class="text-center">
+              <a class="btn btn-primary btn-lg" href={{pathFor 'createForum'}}>Create Open Forum</a>
+              <a class="btn btn-success btn-lg" href={{pathFor 'joinForum'}}>Join Open Forum</a>
+            </div>
+    	  </div>
+    	</div>
+  
+    </div>
+  </div>
+
+</template>
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="span8">
+            <div class="well">Some Text Here</div>
+        </div>
+        <div class="span4">
+            <div class="well">Some Nav Here</div>
+        </div>
+    </div>
+</div> -->

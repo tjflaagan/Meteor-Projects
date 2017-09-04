@@ -1,0 +1,54 @@
+<template name="joinWhatami">
+  	<div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>Join WhatAmI</h3>
+                <form class="viewForum">
+                  <b>Enter Easy ID:</b><br />
+                  <input type="text" id="easyid" class="form-control"><br />
+                  <button type="submit" class="btn btn-primary" id="whatamiview">Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="playWhatami">
+  <h2>{{this.Easy_ID}} : {{this.Subject}}</h2>
+      <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                {{#unless notStarted}}
+                  {{> whatamiStarter}}
+                {{else}}
+                  {{> whatamiWords}}
+                {{/unless}}
+              </div>
+            </div>
+            <h4>Remember to keep track of your team points! They are erased after each turn.</h4>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="whatamiStarter">
+  <h3>Are you ready to start?</h3>
+  <form class="viewForum">
+    <button type="submit" class="btn btn-success" id="startwhatami">Start</button>
+    <button type="submit" class="btn btn-danger" id="resetCounter">Reset Counter</button>
+  </form>
+</template>
+
+<template name="whatamiWords">
+  <h3>{{getCountdown}} seconds left!</h3><br />
+  <h1>{{getWord}} </h1>
+  <hr />
+  <button type="submit" class="btn btn-success" id="plusone">+1</button>
+  <h3>Points: {{getPoints}} </h3>
+</template>

@@ -1,0 +1,61 @@
+<template name="joinPoll">
+  	<div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>Join Poll</h3>
+                <form class="viewForum">
+                  <b>Enter Easy ID:</b><br />
+                  <input type="text" id="easyid" class="form-control"><br />
+                  <button type="submit" class="btn btn-primary" id="pollview">Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="takePoll">
+  	<h2>{{this.Easy_ID}}</h2>
+      <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+              	{{> poll}}
+              </div>
+            </div>        
+          </div>
+      </div>
+    </div>
+</template>
+
+<template name="poll">
+	<h2>{{this.Question}}</h2>
+	<hr />
+	{{#each answers}}
+		{{> pollButton}}
+	{{/each}}
+</template>
+
+<template name="pollButton">
+	<button type="submit" class="btn btn-primary pollSubmit" >{{this}}</button>
+</template>
+
+<template name="waitPoll">
+  	<h2>{{this.Easy_ID}}</h2>
+      <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+              	<h2>Waiting for New Question</h2>
+              </div>
+            </div>        
+          </div>
+      </div>
+    </div>
+</template>
+

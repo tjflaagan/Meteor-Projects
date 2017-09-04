@@ -1,0 +1,36 @@
+<template name="viewForumSubmissions">
+  <h2>{{this.Easy_ID}} : {{this.Question}}</h2>
+
+  {{#each answers}}
+    {{> forumAnswers}}
+  {{/each}}
+</template>
+
+<template name="forumAnswers">
+  <div class="col-md-10 col-md-offset-2 container">
+    <div class="row" >
+      <div class="col-sm-8">
+        <div class="well">
+          <div class="text-center">
+            <b>{{this}}</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="enterForumSubmissions">
+  	<div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>{{this.Question}}</h3>
+                  {{> quickForm id="respond" type="update-pushArray" scope="Answer" collection="Collections.Forums" doc=this}}
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>

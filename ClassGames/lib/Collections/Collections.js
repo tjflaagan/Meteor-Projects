@@ -1,0 +1,3 @@
+Collections = {};
+Schema = {};
+GridFS = {};

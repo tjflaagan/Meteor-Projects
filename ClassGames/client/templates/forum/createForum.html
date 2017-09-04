@@ -1,0 +1,44 @@
+<template name="createForum">
+ {{> cForum}}
+ {{> subForum}}
+
+</template>
+
+<template name="cForum">
+  <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>Forum Question</h3>
+                  {{#autoForm schema="Schema.Forums" id="insertForum" type="method" meteormethod="newForum" }}
+                  <fieldset>
+                  {{> afQuickField name="Question"}}
+                  <button type="submit" class="btn btn-primary">Submit</button>    
+                </fieldset>
+                {{/autoForm}}
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="subForum">
+    <div class="col-md-10 col-md-offset-4 container">
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="well">
+              <div class="text-center">
+                <h3>View Submissions</h3>
+                <form class="viewForum">
+                  <b>Enter Easy ID:</b><br />
+                  <input type="text" id="easyid" class="form-control"><br />
+                  <button type="submit" class="btn btn-primary" id="forumview">Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</template>
